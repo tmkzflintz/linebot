@@ -11,10 +11,9 @@ $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' 
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
-print_r($request_array);
+printf($channelSecret);
 
 if ( sizeof($request_array['events']) > 0 ) {
-
     foreach ($request_array['events'] as $event) {
 
         $reply_message = '';

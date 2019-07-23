@@ -13,7 +13,7 @@ $request_array = json_decode($request, true);   // Decode JSON to Array
 
 print_r($request);
 
-if ( sizeof($request_array['events']) > 0 ) {
+if ( 2 > 0 ) {
 
     foreach ($request_array['events'] as $event) {
 

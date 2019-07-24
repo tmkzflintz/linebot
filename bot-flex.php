@@ -130,24 +130,6 @@ $jsonFlex = [
     ]
   ];
 
-$coupon = json_encode('{
-    "type": "template",
-  "altText": "this is a buttons template",
-  "template": {
-        "type": "buttons",
-    "actions": [
-      {
-          "type": "uri",
-        "label": "Action 1",
-        "uri": "http://lin.ee/4vFyak4"
-      }
-    ],
-    "thumbnailImageUrl": "https://scontent.fbkk13-1.fna.fbcdn.net/v/t1.0-9/64334556_447011916082694_463658418436046848_n.jpg?_nc_cat=108&_nc_oc=AQnSqzr5QtAlMKJfuDFPmrNVf9KnOd0rYcqWZzO_5SL7o947QMeBJT5UKNS1CeMNOIo&_nc_ht=scontent.fbkk13-1.fna&oh=8c24dda4706b44dbaaa63a88c1f9f9d7&oe=5DE83644",
-    "title": "Deploy Space",
-    "text": "Buy 1 Get 1"
-  }
-}');
-
 
 
 if ( sizeof($request_array['events']) > 0 ) {
@@ -166,7 +148,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 
         $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
 
-        $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $coupon);
+        $send_result = send_reply_message($API_URL.'/reply', $POST_HEADER, $post_body);
 
         echo "Result: ".$send_result."\r\n";
         
